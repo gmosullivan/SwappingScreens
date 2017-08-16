@@ -13,6 +13,7 @@
 		7F0B46141F44446E009F8F13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F0B46131F44446E009F8F13 /* Assets.xcassets */; };
 		7F0B46171F44446E009F8F13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F0B46151F44446E009F8F13 /* LaunchScreen.storyboard */; };
 		7F0B461F1F444853009F8F13 /* MusicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B461E1F444853009F8F13 /* MusicListViewController.swift */; };
+		7F0B46211F444C93009F8F13 /* PlayMusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F0B46201F444C93009F8F13 /* PlayMusicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7F0B46161F44446E009F8F13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F0B46181F44446E009F8F13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F0B461E1F444853009F8F13 /* MusicListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicListViewController.swift; sourceTree = "<group>"; };
+		7F0B46201F444C93009F8F13 /* PlayMusicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayMusicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				7F0B460C1F44446E009F8F13 /* AppDelegate.swift */,
 				7F0B460E1F44446E009F8F13 /* LoginViewController.swift */,
 				7F0B461E1F444853009F8F13 /* MusicListViewController.swift */,
+				7F0B46201F444C93009F8F13 /* PlayMusicViewController.swift */,
 				7F0B46101F44446E009F8F13 /* Main.storyboard */,
 				7F0B46131F44446E009F8F13 /* Assets.xcassets */,
 				7F0B46151F44446E009F8F13 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			files = (
 				7F0B460F1F44446E009F8F13 /* LoginViewController.swift in Sources */,
 				7F0B460D1F44446E009F8F13 /* AppDelegate.swift in Sources */,
+				7F0B46211F444C93009F8F13 /* PlayMusicViewController.swift in Sources */,
 				7F0B461F1F444853009F8F13 /* MusicListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

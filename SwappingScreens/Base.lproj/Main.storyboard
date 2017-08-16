@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -73,12 +74,81 @@
                     <view key="view" contentMode="scaleToFill" id="oj7-z0-dwt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8M7-WN-eXZ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="a2a-Hd-5xJ"/>
+                                    <constraint firstAttribute="width" constant="46" id="azb-cQ-HQ4"/>
+                                </constraints>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="u2U-hV-kMf" eventType="touchUpInside" id="cRI-uI-yX3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1LT-Mh-N3V">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="QMu-4V-xCH"/>
+                                    <constraint firstAttribute="height" constant="30" id="t1m-51-8Oc"/>
+                                </constraints>
+                                <state key="normal" title="Load Music"/>
+                                <connections>
+                                    <action selector="loadMusic:" destination="u2U-hV-kMf" eventType="touchUpInside" id="7eW-dc-D9e"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1LT-Mh-N3V" firstAttribute="centerY" secondItem="oj7-z0-dwt" secondAttribute="centerY" id="8dl-ek-SSe"/>
+                            <constraint firstItem="8M7-WN-eXZ" firstAttribute="top" secondItem="I2W-1d-0En" secondAttribute="bottom" constant="10" id="DVW-Qi-VYm"/>
+                            <constraint firstItem="1LT-Mh-N3V" firstAttribute="centerX" secondItem="oj7-z0-dwt" secondAttribute="centerX" id="IzP-KD-QeY"/>
+                            <constraint firstItem="8M7-WN-eXZ" firstAttribute="leading" secondItem="oj7-z0-dwt" secondAttribute="leadingMargin" constant="10" id="Nra-Qc-C0J"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <segue destination="pSg-uP-NHG" kind="showDetail" identifier="PlayMusicVC" id="sXT-cH-DSF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hwf-ff-KBV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="796" y="37"/>
+        </scene>
+        <!--Play Music View Controller-->
+        <scene sceneID="ZXp-Ow-9i8">
+            <objects>
+                <viewController id="pSg-uP-NHG" customClass="PlayMusicViewController" customModule="SwappingScreens" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SKw-wk-A2l"/>
+                        <viewControllerLayoutGuide type="bottom" id="c1L-sZ-x7j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YiM-oh-Oi1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPB-90-dZV">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="0Wb-Bn-iMX"/>
+                                    <constraint firstAttribute="width" constant="240" id="hni-B5-waS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lPB-90-dZV" firstAttribute="centerX" secondItem="YiM-oh-Oi1" secondAttribute="centerX" id="0Np-1T-clG"/>
+                            <constraint firstItem="lPB-90-dZV" firstAttribute="top" secondItem="SKw-wk-A2l" secondAttribute="bottom" constant="100" id="ncz-O0-En5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="songTitleLabel" destination="lPB-90-dZV" id="oD5-qM-LdY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RXn-CO-0vX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1494" y="37"/>
         </scene>
     </scenes>
 </document>
